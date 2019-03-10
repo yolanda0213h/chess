@@ -1,24 +1,1104 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b2u-Hf-VMa">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.47"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--來盤棋-->
+        <scene sceneID="WvZ-JI-IpI">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController id="nUm-tb-sPA" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="TnH-5I-4ei">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="R8q-rB-w90">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIS-g4-ET8">
+                                    <rect key="frame" x="40" y="30" width="300" height="120"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <attributedString key="attributedText">
+                                        <fragment content="棋類">
+                                            <attributes>
+                                                <color key="NSBackgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="NSColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="24" name="STSongti-TC-Regular"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="指在棋盤上依照規則移動上面的棋子，配件只需棋類三要素、偏向抽象且規則簡潔，傾向以策略定勝負的遊戲，橫跨版圖遊戲、紙筆遊戲、">
+                                            <attributes>
+                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="18" name=".PingFangTC-Regular"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="智力遊戲">
+                                            <attributes>
+                                                <color key="NSBackgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="18" name=".PingFangTC-Regular"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="。">
+                                            <attributes>
+                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="18" name=".PingFangTC-Regular"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="WRB-Y6-AUF">
+                            <rect key="frame" x="0.0" y="469" width="375" height="80"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="⇧水平滑動選棋⇧" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDT-QT-ULa">
+                                    <rect key="frame" x="40" y="0.0" width="300" height="60"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <sections>
+                            <tableViewSection id="Bl0-tN-lGh">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="309" id="l36-SZ-gNb">
+                                        <rect key="frame" x="0.0" y="160" width="375" height="309"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="l36-SZ-gNb" id="vLX-v7-fgl">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="309"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v1a-hl-T7z">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="320"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gpT-cY-ted">
+                                                            <rect key="frame" x="0.0" y="0.0" width="2250" height="320"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="象棋" translatesAutoresizingMaskIntoConstraints="NO" id="rf5-n6-Hs6">
+                                                                    <rect key="frame" x="0.0" y="10" width="375" height="250"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                </imageView>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="圍棋" translatesAutoresizingMaskIntoConstraints="NO" id="nFE-wq-aE1">
+                                                                    <rect key="frame" x="375" y="10" width="375" height="250"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                </imageView>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="跳棋" translatesAutoresizingMaskIntoConstraints="NO" id="bk6-6K-Ukn">
+                                                                    <rect key="frame" x="750" y="10" width="375" height="250"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                </imageView>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="西洋棋" translatesAutoresizingMaskIntoConstraints="NO" id="W2T-wN-7dl">
+                                                                    <rect key="frame" x="1125" y="10" width="375" height="250"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                </imageView>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="蛇梯棋" translatesAutoresizingMaskIntoConstraints="NO" id="Tuy-cq-QS4">
+                                                                    <rect key="frame" x="1500" y="10" width="375" height="250"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                </imageView>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="雙陸棋" translatesAutoresizingMaskIntoConstraints="NO" id="88r-zp-Xoh">
+                                                                    <rect key="frame" x="1875" y="10" width="375" height="250"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                </imageView>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dtb-Vy-vCD">
+                                                                    <rect key="frame" x="157" y="260" width="61" height="48"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                    <state key="normal" title="象棋"/>
+                                                                    <connections>
+                                                                        <segue destination="fXh-RP-fqe" kind="show" id="nZg-6D-a4T"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ijy-hC-q9E">
+                                                                    <rect key="frame" x="2023" y="258" width="91" height="48"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                    <state key="normal" title="雙陸棋"/>
+                                                                    <connections>
+                                                                        <segue destination="8L0-cb-TVT" kind="show" id="cM6-5w-ft7"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qFI-MP-Pv6">
+                                                                    <rect key="frame" x="1642" y="260" width="91" height="48"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                    <state key="normal" title="蛇梯棋"/>
+                                                                    <connections>
+                                                                        <segue destination="pRh-6H-vYa" kind="show" id="Pdh-dG-Xm6"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C7L-dF-knn">
+                                                                    <rect key="frame" x="1273" y="260" width="91" height="48"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                    <state key="normal" title="西洋棋"/>
+                                                                    <connections>
+                                                                        <segue destination="gZu-rS-Id0" kind="show" id="o6e-Ka-ojp"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWX-iM-fEe">
+                                                                    <rect key="frame" x="907" y="262" width="61" height="48"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                    <state key="normal" title="跳棋"/>
+                                                                    <connections>
+                                                                        <segue destination="kLr-25-es2" kind="show" id="UWL-sX-NHx"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YR8-s6-U9a">
+                                                                    <rect key="frame" x="532" y="262" width="61" height="48"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                                    <state key="normal" title="圍棋"/>
+                                                                    <connections>
+                                                                        <segue destination="8RU-7U-q9Q" kind="show" id="2g9-8O-Mva"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <viewLayoutGuide key="safeArea" id="1dA-SM-jjv"/>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
+                                                            <size key="value" width="2250" height="0.0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </scrollView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="nUm-tb-sPA" id="70E-1t-95w"/>
+                            <outlet property="delegate" destination="nUm-tb-sPA" id="7zP-8G-ZxU"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="來盤棋" id="3LI-xd-RIB"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aRf-Bh-X7c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-474.39999999999998" y="157.87106446776613"/>
+        </scene>
+        <!--西洋棋-->
+        <scene sceneID="ciy-m1-IAi">
+            <objects>
+                <tableViewController id="gZu-rS-Id0" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dpn-T7-F0k">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="psG-Id-8Mh">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="120" id="aMM-gP-qjQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aMM-gP-qjQ" id="QdV-qo-hck">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8La-9s-JND">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BFD-YA-7pg">
+                                                            <rect key="frame" x="0.0" y="0.0" width="1200" height="120"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3y-oh-JQm">
+                                                                    <rect key="frame" x="0.0" y="10" width="80" height="80"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <state key="normal" image="blackKing"/>
+                                                                    <connections>
+                                                                        <segue destination="cbX-we-W0g" kind="show" id="CoL-jh-hWX"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yo3-HH-PRb">
+                                                                    <rect key="frame" x="100" y="10" width="80" height="80"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <state key="normal" image="blackQueen"/>
+                                                                    <connections>
+                                                                        <segue destination="KWc-Gn-cAX" kind="show" id="mVG-VF-R8j"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnB-al-B0K">
+                                                                    <rect key="frame" x="200" y="10" width="80" height="80"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <state key="normal" image="blackRook"/>
+                                                                    <connections>
+                                                                        <segue destination="nh1-2i-xrl" kind="show" id="gzK-OG-6iy"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZI-IY-bQG">
+                                                                    <rect key="frame" x="300" y="10" width="80" height="80"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <state key="normal" image="blackBishop"/>
+                                                                    <connections>
+                                                                        <segue destination="LxZ-D8-J2D" kind="show" id="E3P-XW-G1D"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wbg-Io-T2I">
+                                                                    <rect key="frame" x="400" y="10" width="80" height="80"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <state key="normal" image="blackKnight"/>
+                                                                    <connections>
+                                                                        <segue destination="hgP-Ga-X5W" kind="show" id="UU7-ZR-1t5"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDz-v8-3xj">
+                                                                    <rect key="frame" x="500" y="10" width="80" height="80"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <state key="normal" image="blackPawn"/>
+                                                                    <connections>
+                                                                        <segue destination="dcE-Z4-Kxb" kind="show" id="9TN-zy-5X0"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="857-2W-MjO">
+                                                                    <rect key="frame" x="600" y="10" width="80" height="80"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <state key="normal" image="whiteKing"/>
+                                                                    <connections>
+                                                                        <segue destination="cbX-we-W0g" kind="show" id="rBr-d2-38a"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoi-E0-Lvh">
+                                                                    <rect key="frame" x="700" y="10" width="80" height="80"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <state key="normal" image="whiteQueen"/>
+                                                                    <connections>
+                                                                        <segue destination="KWc-Gn-cAX" kind="show" id="8Iq-XQ-b7A"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Jx-NE-I30">
+                                                                    <rect key="frame" x="800" y="10" width="80" height="80"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <state key="normal" image="whiteRook"/>
+                                                                    <connections>
+                                                                        <segue destination="nh1-2i-xrl" kind="show" id="mEu-b4-Rfc"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhS-HC-YZd">
+                                                                    <rect key="frame" x="900" y="10" width="80" height="80"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <state key="normal" image="whiteBishop"/>
+                                                                    <connections>
+                                                                        <segue destination="LxZ-D8-J2D" kind="show" id="keN-Hi-U6h"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xiv-jw-vba">
+                                                                    <rect key="frame" x="1000" y="10" width="80" height="80"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <state key="normal" image="whiteKnight"/>
+                                                                    <connections>
+                                                                        <segue destination="hgP-Ga-X5W" kind="show" id="Rca-bT-Xxr"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VD9-Gp-BEy">
+                                                                    <rect key="frame" x="1100" y="10" width="80" height="80"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <state key="normal" image="whitePawn"/>
+                                                                    <connections>
+                                                                        <segue destination="dcE-Z4-Kxb" kind="show" id="iH1-p1-lqC"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nsw-ka-cRt">
+                                                                    <rect key="frame" x="0.0" y="80" width="80" height="40"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <state key="normal" title="黑國王">
+                                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <segue destination="cbX-we-W0g" kind="show" id="bWg-PP-RzH"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RuK-HW-sut">
+                                                                    <rect key="frame" x="100" y="80" width="80" height="40"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <state key="normal" title="黑王后">
+                                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <segue destination="KWc-Gn-cAX" kind="show" id="QuM-vG-UDP"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXO-fW-N1d">
+                                                                    <rect key="frame" x="200" y="80" width="80" height="40"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <state key="normal" title="黑城堡">
+                                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <segue destination="nh1-2i-xrl" kind="show" id="dZN-uU-YiM"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JK5-n7-gz1">
+                                                                    <rect key="frame" x="300" y="80" width="80" height="40"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <state key="normal" title="黑教皇">
+                                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <segue destination="LxZ-D8-J2D" kind="show" id="x5Z-mt-LIl"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fm3-h3-TOi">
+                                                                    <rect key="frame" x="400" y="80" width="80" height="40"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <state key="normal" title="黑騎士">
+                                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <segue destination="hgP-Ga-X5W" kind="show" id="hL6-g5-FKL"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPN-TU-468">
+                                                                    <rect key="frame" x="500" y="80" width="80" height="40"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <state key="normal" title="黑士兵">
+                                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <segue destination="dcE-Z4-Kxb" kind="show" id="rkM-KC-4Ct"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paD-MN-8ah">
+                                                                    <rect key="frame" x="600" y="80" width="80" height="40"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <state key="normal" title="白國王">
+                                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <segue destination="cbX-we-W0g" kind="show" id="obt-IQ-SnV"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6j-xa-WXN">
+                                                                    <rect key="frame" x="700" y="78" width="80" height="40"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <state key="normal" title="白王后">
+                                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <segue destination="KWc-Gn-cAX" kind="show" id="sJf-hp-Ir2"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DZc-Co-3lR">
+                                                                    <rect key="frame" x="799" y="78" width="80" height="40"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <state key="normal" title="白城堡">
+                                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <segue destination="nh1-2i-xrl" kind="show" id="csC-fo-Ay4"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btB-nh-ll4">
+                                                                    <rect key="frame" x="1000" y="76" width="80" height="40"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <state key="normal" title="白騎士">
+                                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <segue destination="hgP-Ga-X5W" kind="show" id="o7a-aZ-j79"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Nu-5h-zTh">
+                                                                    <rect key="frame" x="1098" y="75" width="80" height="40"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <state key="normal" title="白士兵">
+                                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <segue destination="dcE-Z4-Kxb" kind="show" id="tcc-k9-OJJ"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCU-SX-iAG">
+                                                                    <rect key="frame" x="900" y="80" width="80" height="40"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <state key="normal" title="白教皇">
+                                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <segue destination="LxZ-D8-J2D" kind="show" id="O45-tx-L2P"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                            <viewLayoutGuide key="safeArea" id="Xze-JD-NdK"/>
+                                                        </view>
+                                                    </subviews>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
+                                                            <size key="value" width="1200" height="0.0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </scrollView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="550" id="3pL-EH-n3i">
+                                        <rect key="frame" x="0.0" y="120" width="375" height="550"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3pL-EH-n3i" id="rpX-c9-aT7">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="550"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u9C-AX-bFS">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="550"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UpB-Z6-Tdc">
+                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="980"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="西洋棋" translatesAutoresizingMaskIntoConstraints="NO" id="Dee-co-tfq">
+                                                                    <rect key="frame" x="27" y="20" width="320" height="200"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S3A-cA-rKk">
+                                                                    <rect key="frame" x="37" y="230" width="300" height="700"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <string key="text">西洋棋的棋盤為正方形，由32個深色和32個淺色方格交替排列組成。每邊8個方格。淺色棋格稱為「白格」，深色棋格稱為「黑格」。
+
+淺色棋子稱為「白棋」，執白棋的棋手稱為「白方」；深色棋子稱為「黑棋」，執黑棋的棋手稱為「黑方」。對弈雙方各有16枚棋子，分別為一國王、一王后、雙主教、雙騎士、雙城堡和八士兵。開局時即全部放在棋盤上規定的棋格內。
+
+棋局由白方先下，對弈雙方輪流移動棋盤上既有的己方棋子，一步棋只能移動一個棋子（唯一的例外是「國王入堡」，是在一步棋同時移動國王和城堡）。棋子要不就是移動到未被占據的棋格，要不就是占據對方棋子所在的棋格，並將對方棋子拿出棋盤，稱為「吃子」（這也有一個例外是「吃過路士兵」，己方的士兵是落在對方被吃士兵的後一格）。一個棋格內只能有一個棋子，棋子也不可重疊。</string>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <viewLayoutGuide key="safeArea" id="stV-A3-SIJ"/>
+                                                        </view>
+                                                    </subviews>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
+                                                            <size key="value" width="0.0" height="980"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </scrollView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="gZu-rS-Id0" id="iCv-G5-BF8"/>
+                            <outlet property="delegate" destination="gZu-rS-Id0" id="fOk-Nk-W2w"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="西洋棋" id="4pb-2Z-3vP"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K7v-hB-0NL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="248.80000000000001" y="-439.43028485757122"/>
+        </scene>
+        <!--國王（King）-->
+        <scene sceneID="7WA-Ys-6h4">
+            <objects>
+                <viewController id="cbX-we-W0g" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UHZ-dT-ruI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V37-dB-8AG">
+                                <rect key="frame" x="60" y="280" width="260" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">國王（King） 
+又稱為「王」。國王是整個棋中最為重要的棋子，它是不能被吃的。走法是橫、直、斜走均可，但每次只能走一格。另外，所走到的位置不可有對方棋子的威脅，否則會被視為「違規移動」。吃子與走法相同。</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="whiteKing" translatesAutoresizingMaskIntoConstraints="NO" id="M3w-zf-YrO">
+                                <rect key="frame" x="180" y="180" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blackKing" translatesAutoresizingMaskIntoConstraints="NO" id="EgJ-lO-kNZ">
+                                <rect key="frame" x="100" y="180" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="MEe-Vc-OkI"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="國王（King）" id="XUo-J3-9Mp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rp9-Y3-KoQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="297" y="340"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sx3-cA-iFM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b2u-Hf-VMa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="nfb-Fp-WG8">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nUm-tb-sPA" kind="relationship" relationship="rootViewController" id="vI6-aR-UtC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BsR-dq-pZL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1364" y="158"/>
+        </scene>
+        <!--蛇梯棋-->
+        <scene sceneID="WoN-Gh-MZU">
+            <objects>
+                <tableViewController id="pRh-6H-vYa" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="SfT-Sg-om1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <scrollView key="tableHeaderView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="dol-dt-Ab3">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KvT-OT-T1h">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="450"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="蛇梯棋(Snakes and Ladders)，是源自於印度的擲賽遊戲，棋盤上除方格外，還繪有梯子、蛇，以骰子隨機決定棋子的步數，途中若抵達梯子或蛇的格子會移至其他格，以抵達終點為勝利。" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERe-fm-tN9">
+                                            <rect key="frame" x="57" y="239" width="260" height="200"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="蛇梯棋" translatesAutoresizingMaskIntoConstraints="NO" id="r6X-Wk-paS">
+                                            <rect key="frame" x="37" y="20" width="300" height="200"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <viewLayoutGuide key="safeArea" id="pOV-lG-d0T"/>
+                                </view>
+                            </subviews>
+                        </scrollView>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="pRh-6H-vYa" id="Mpe-at-ihy"/>
+                            <outlet property="delegate" destination="pRh-6H-vYa" id="1DI-zG-eux"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="蛇梯棋" id="THa-DI-P4o"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EVC-Av-GQy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="391" y="1045"/>
+        </scene>
+        <!--雙陸棋-->
+        <scene sceneID="jec-7H-uSp">
+            <objects>
+                <tableViewController id="8L0-cb-TVT" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="AAn-qP-be7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="kU1-8Y-Za1">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="555" id="LJf-lc-qXI">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="555"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LJf-lc-qXI" id="qq2-KE-nfu">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="554.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IpJ-qR-CzG">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="555"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pHh-gd-rl9">
+                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="700"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Cd-wl-IVv">
+                                                                    <rect key="frame" x="50" y="230" width="280" height="450"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <string key="text">雙陸棋（Backgammon），又稱百家樂棋，是一類供兩人對弈的版圖遊戲，棋子的移動以擲骰子的點數決定，首位把所有棋子移離棋盤的玩者可獲得勝利。遊戲在世界多個地方演變出多個版本，但保留一些共通的基本元素。
+
+在遊戲中，每位玩者盡力把棋子移動及移離棋盤。雖然遊戲有很大的運氣成分，遊戲的策略仍然十分重要。每次擲骰子時，玩者都要從多種選擇中選出最佳的走法。電腦科學家們對雙陸棋做了很多研究，目前雙陸棋軟體已經可以擊敗世界級的人類選手。</string>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="雙陸棋" translatesAutoresizingMaskIntoConstraints="NO" id="VOK-7I-nnm">
+                                                                    <rect key="frame" x="30" y="20" width="320" height="200"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <viewLayoutGuide key="safeArea" id="OnQ-TG-FhO"/>
+                                                        </view>
+                                                    </subviews>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
+                                                            <size key="value" width="0.0" height="700"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </scrollView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="8L0-cb-TVT" id="y2L-da-fyk"/>
+                            <outlet property="delegate" destination="8L0-cb-TVT" id="gSM-oS-5o7"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="雙陸棋" id="Pbe-cT-Iqd"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X21-nt-572" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1153" y="988"/>
+        </scene>
+        <!--圍棋-->
+        <scene sceneID="sNa-JH-iKr">
+            <objects>
+                <tableViewController id="8RU-7U-q9Q" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="KBD-Ex-5KT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <scrollView key="tableFooterView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="NWz-c5-Zla">
+                            <rect key="frame" x="0.0" y="555" width="375" height="400"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </scrollView>
+                        <sections>
+                            <tableViewSection id="42p-HE-k6H">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="555" id="ERp-tn-pwI">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="555"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ERp-tn-pwI" id="IjD-aL-mI4">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="554.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oql-zp-RdX">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="555"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nQv-Iy-niG">
+                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="1550"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FlU-td-FyQ">
+                                                                    <rect key="frame" x="35" y="230" width="300" height="1300"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <string key="text">圍棋是一種策略性棋類，使用格狀棋盤及黑白二色棋子進行對弈。起源於中國，中國古時有「弈」、「碁」、「手談」等多種稱謂，屬琴棋書畫四藝之一。西方稱之為「Go」，是源自日語「碁」的發音。
+
+對弈雙方在棋盤網格的交叉點上交替放置黑色和白色的棋子。落子完畢後，棋子不能移動。對弈過程中圍地吃子，以所圍「地」的大小決定勝負。
+
+圍棋規則簡潔而優雅，但玩法卻千變萬化，欲精通其內涵需要大量的練習與鑽研。西洋棋大師伊曼紐·拉斯克稱讚說：「如果在宇宙中的其他地方存在智慧型生命形式，他們幾乎肯定會下圍棋。」與此同時，圍棋被認為是目前世界上最複雜的棋盤遊戲之一。  圍棋在公元7世紀傳入日本，很快就流行於宮廷和貴族之中。戰國末期，權臣豐臣秀吉設立碁所。德川幕府時代，出現了在天皇或征夷大將軍面前對弈的「御城棋」，日本圍棋逐漸興盛，出現了本因坊、安井、井上、林等圍棋世家。其中坊門尤其人才輩出，先後出現了道策、丈和、秀和、秀策、秀甫、秀榮等傑出棋士。日本圍棋由於廢除了中國古代圍棋的座子制（古代中國圍棋是放四個座子，就是兩黑兩白放在對角星的位置上，雙方在這個基礎上開始布局），布局理論得以極大發展。
+
+同時由於日本棋士對唐代圍棋數路法的勝負判定規則（以圍地多少還是活子多少為目的——或者是否以其它目的行棋，還可繼續考證）產生了直觀上的的誤解，從而產生對唐宋數路法扣除眼位和公氣、明清數子法終局還棋頭（其本質是子多為勝、眼位中盤的勝負計算方法）的疑惑，將其廢除，從而產生了與中國古棋大為不同的地多為勝的日式圍棋，並演變為現代圍棋。</string>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="圍棋" translatesAutoresizingMaskIntoConstraints="NO" id="2Pw-f0-T5f">
+                                                                    <rect key="frame" x="30" y="20" width="320" height="200"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <viewLayoutGuide key="safeArea" id="CJL-TI-dzB"/>
+                                                        </view>
+                                                    </subviews>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
+                                                            <size key="value" width="0.0" height="1550"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </scrollView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="8RU-7U-q9Q" id="cgE-7e-n4K"/>
+                            <outlet property="delegate" destination="8RU-7U-q9Q" id="Ku2-GO-fe8"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="圍棋" id="laH-dW-ayJ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oh1-VS-bLd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1068" y="1012"/>
+        </scene>
+        <!--跳棋-->
+        <scene sceneID="Urv-27-tx1">
+            <objects>
+                <tableViewController id="kLr-25-es2" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Pua-er-JpT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <scrollView key="tableFooterView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="69u-wX-WO7">
+                            <rect key="frame" x="0.0" y="555" width="375" height="400"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </scrollView>
+                        <sections>
+                            <tableViewSection id="SSB-Bg-qUN">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="555" id="Blh-sT-B0M">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="555"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Blh-sT-B0M" id="Y3t-xe-Mf0">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="554.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CIu-kv-PPz">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="555"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kfl-23-Is4">
+                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="1050"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0z-mB-H5R">
+                                                                    <rect key="frame" x="35" y="230" width="300" height="800"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <string key="text">正方跳棋（Halma），是由美國人George Howard Monks於1883年到1884年發明的，也說法認為是1885年發明。這種跳棋可供2人或4人進行遊戲，棋盤為正方形，共有256格，開始時棋子分布在角落，以最快跳到對角為目標，規則和現在的中國跳棋相似。Halma原文為希臘文的 ἅλμα，為跳躍之意，遊戲的靈感則來自一個於1854年發明的英國遊戲Hoppity。
+
+正方跳棋誕生後，很快又出現了使用六角星形棋盤的變種，在1892就由德國著名的遊戲公司Ravensburger取得專利，被命名為Sternhalma，意為星形跳棋，也就是後來所稱的中國跳棋。與正方跳棋相比，遊戲的變化和所需的技巧更加複雜。這個遊戲在20世紀初期逐漸在各國開始流行，其較早的英文名為Hop Ching Checker Game，但隨後被改為Chinese Checkers，但事實上和中國沒有關係，只是為了從營銷角度上增加神秘感。中國跳棋的稱法來自英語，而在粵語中稱作波子棋，因為彈珠也被廣泛用作棋子，彈珠在粵語中的說法即為波子。</string>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="跳棋" translatesAutoresizingMaskIntoConstraints="NO" id="amk-QM-jec">
+                                                                    <rect key="frame" x="30" y="20" width="320" height="200"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <viewLayoutGuide key="safeArea" id="O2Q-s3-72b"/>
+                                                        </view>
+                                                    </subviews>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
+                                                            <size key="value" width="0.0" height="1050"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </scrollView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="kLr-25-es2" id="Zzk-ej-7rb"/>
+                            <outlet property="delegate" destination="kLr-25-es2" id="cR2-Np-mUL"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="跳棋" id="tv5-gL-8sk"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eif-Zb-GbQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-343" y="1025"/>
+        </scene>
+        <!--象棋-->
+        <scene sceneID="qu4-Ck-5FU">
+            <objects>
+                <tableViewController id="fXh-RP-fqe" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="VBB-zq-73F">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="wed-Ec-oMN">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="555" id="B0X-jd-CyE">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="555"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B0X-jd-CyE" id="JkX-nz-tLa">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="554.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cNY-hc-f6a">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="555"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3ey-gf-bLe">
+                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="1050"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PrO-9J-afb">
+                                                                    <rect key="frame" x="35" y="230" width="300" height="800"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <string key="text">象棋的棋盤由9條縱線和10條橫線相交而成。棋子放在各條線的相交點上，並在線上移動。棋盤中間的一行沒有畫上縱線，稱為「河界」，通常標上「楚河漢界」字樣，象徵楚漢相爭時的鴻溝，或標上「觀棋不語真君子，起手無回大丈夫」等字樣，這一行的縱線實際上是隱藏的，並不影響棋子移動。
+
+現行的中式記錄方法是：9條縱線，紅方從右到左用漢字「一」至「九」表示，黑方在自己的那一面從右到左用數字「1」至「9」表示。也就是說，紅方的縱線「一」就是黑方的縱線「9」，以此類推。第四條縱線（或第6條縱線）和第六條縱線（或第4條縱線）稱為「兩肋」、「兩肋線」，簡稱「肋」。棋盤上，劃有斜交叉線而構成「米」字形方格的地方，雙方各有一塊，稱為「九宮」，是將（帥）和士（仕）活動的區域。
+ 棋子的顏色分為紅色和黑色（也有綠色和藍色代替黑色），雙方各有16枚棋子：分別是一枚將（帥）、2枚士（仕）、2枚象（相）、2枚車（俥）、2枚馬（傌）、2枚砲（炮）、5枚卒（兵）。</string>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="象棋" translatesAutoresizingMaskIntoConstraints="NO" id="mIk-eN-Dux">
+                                                                    <rect key="frame" x="30" y="20" width="320" height="200"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <viewLayoutGuide key="safeArea" id="Hvf-Rf-Yel"/>
+                                                        </view>
+                                                    </subviews>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
+                                                            <size key="value" width="0.0" height="1050"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </scrollView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="fXh-RP-fqe" id="VcT-8f-MI2"/>
+                            <outlet property="delegate" destination="fXh-RP-fqe" id="oI4-W3-Bii"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="象棋" id="bov-lG-Aje"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xfY-oz-ovT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1839" y="971"/>
+        </scene>
+        <!--王后（Queen）-->
+        <scene sceneID="MJE-jo-Thc">
+            <objects>
+                <viewController id="KWc-Gn-cAX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dmt-Dc-s6F">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJR-1w-GsL">
+                                <rect key="frame" x="60" y="280" width="260" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">王后（Queen） 
+又稱為「后」。走法是橫、直、斜走均可，格數不限，但不可越過其他棋子。吃子和走法相同。</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="whiteQueen" translatesAutoresizingMaskIntoConstraints="NO" id="Q02-8F-lAi">
+                                <rect key="frame" x="180" y="180" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blackQueen" translatesAutoresizingMaskIntoConstraints="NO" id="76S-T0-Phm">
+                                <rect key="frame" x="100" y="180" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ZPd-1R-8Bp"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="王后（Queen）" id="Es9-T1-rrG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k2A-fR-HHK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="978" y="361"/>
+        </scene>
+        <!--城堡（Rook）-->
+        <scene sceneID="R2z-sS-XUb">
+            <objects>
+                <viewController id="nh1-2i-xrl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tyx-Ma-7t8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p5G-LX-1Q0">
+                                <rect key="frame" x="60" y="280" width="260" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">城堡（Rook） 
+城堡的走法是橫走或直走，格數不限，但不可斜走，也不可越過其他棋子。吃子與走法相同，另外有一種特殊的走法，稱作「國王入堡」。</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="whiteRook" translatesAutoresizingMaskIntoConstraints="NO" id="Og1-AI-EfM">
+                                <rect key="frame" x="180" y="180" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blackRook" translatesAutoresizingMaskIntoConstraints="NO" id="LrZ-cp-n2a">
+                                <rect key="frame" x="100" y="180" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="tN6-v8-Sg7"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="城堡（Rook）" id="4ER-hE-aZ8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gw3-OC-YI2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1697" y="-439"/>
+        </scene>
+        <!--主教（Bishop）-->
+        <scene sceneID="v7V-Kj-ezA">
+            <objects>
+                <viewController id="LxZ-D8-J2D" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RZR-7B-9dp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ngq-SO-9gF">
+                                <rect key="frame" x="60" y="280" width="260" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">主教（Bishop） 
+主教只可斜走，格數不限，但不可轉向，也不可越過其他棋子。吃子與走法相同 ，主教有時也會分成白主教與黑主教 ，其原因為兩隻主教棋一個只能走白格子 ，一個只能走黑格子 。</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="whiteBishop" translatesAutoresizingMaskIntoConstraints="NO" id="nAB-z1-6Dk">
+                                <rect key="frame" x="180" y="180" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blackBishop" translatesAutoresizingMaskIntoConstraints="NO" id="x25-Yg-rVA">
+                                <rect key="frame" x="100" y="180" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="FA9-08-gov"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="主教（Bishop）" id="QPq-Yv-OPQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EKA-IV-X4n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="977" y="-422"/>
+        </scene>
+        <!--騎士（Knight）-->
+        <scene sceneID="CJ7-qy-wUm">
+            <objects>
+                <viewController id="hgP-Ga-X5W" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dJG-uR-jK7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="863-jj-5WG">
+                                <rect key="frame" x="60" y="280" width="250" height="320"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">騎士（Knight） 
+騎士的走法和象棋的「馬」相同，同樣是走「日」字，或英文字母大寫的「L」形：即先向左（或右）走1格，再向上（或下）走2格；或先向左（或右）走2格，再向上（或下）走1格。不同的是，西洋棋的騎士沒有「絆馬腳」的限制，故騎士可越過其他棋子。吃子與走法相同。</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="whiteKnight" translatesAutoresizingMaskIntoConstraints="NO" id="NVH-YA-YfP">
+                                <rect key="frame" x="180" y="180" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blackKnight" translatesAutoresizingMaskIntoConstraints="NO" id="MdG-DF-1Z3">
+                                <rect key="frame" x="100" y="180" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="79O-Jc-eqe"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="騎士（Knight）" id="pb7-zu-wlo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LEX-9h-8Mf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-54" y="-1322"/>
+        </scene>
+        <!--士兵（Pawn） -->
+        <scene sceneID="9X4-Sl-KWd">
+            <objects>
+                <viewController id="dcE-Z4-Kxb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dFH-ud-T6m">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGG-cN-vFA">
+                                <rect key="frame" x="60" y="280" width="260" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">士兵（Pawn） 
+士兵的走法是，第一步向前可走一格或兩格，以後每次只能向前走一格，不可向後走，或越過其他棋子。但吃對方棋子時，則是向位於斜前方的那格去吃，另有一種特殊走法「吃過路兵」。 </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="whitePawn" translatesAutoresizingMaskIntoConstraints="NO" id="ARE-jT-w7b">
+                                <rect key="frame" x="180" y="180" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blackPawn" translatesAutoresizingMaskIntoConstraints="NO" id="UXF-ar-62L">
+                                <rect key="frame" x="100" y="180" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ybu-ay-S77"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="士兵（Pawn） " id="MU1-zb-UL6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kPj-v8-GEY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="820" y="-1310"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="blackBishop" width="800" height="800"/>
+        <image name="blackKing" width="800" height="800"/>
+        <image name="blackKnight" width="800" height="800"/>
+        <image name="blackPawn" width="800" height="800"/>
+        <image name="blackQueen" width="800" height="800"/>
+        <image name="blackRook" width="800" height="800"/>
+        <image name="whiteBishop" width="800" height="800"/>
+        <image name="whiteKing" width="800" height="800"/>
+        <image name="whiteKnight" width="800" height="800"/>
+        <image name="whitePawn" width="800" height="800"/>
+        <image name="whiteQueen" width="800" height="800"/>
+        <image name="whiteRook" width="800" height="800"/>
+        <image name="圍棋" width="640" height="480"/>
+        <image name="蛇梯棋" width="564" height="564"/>
+        <image name="西洋棋" width="434" height="299"/>
+        <image name="象棋" width="800" height="880"/>
+        <image name="跳棋" width="800" height="624"/>
+        <image name="雙陸棋" width="1024" height="683"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="tcc-k9-OJJ"/>
+        <segue reference="o7a-aZ-j79"/>
+        <segue reference="keN-Hi-U6h"/>
+        <segue reference="dZN-uU-YiM"/>
+        <segue reference="QuM-vG-UDP"/>
+        <segue reference="CoL-jh-hWX"/>
+    </inferredMetricsTieBreakers>
 </document>
